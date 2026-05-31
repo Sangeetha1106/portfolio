@@ -47,11 +47,11 @@ const Projects = () => {
         "Students can access learning materials.",
         "Online practice resources are available for students."
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/Sangeetha1106/ABC-School-webpage",
       liveDemoLink: "#"
     },
     {
-      title: "Food Shop Website",
+      title: "Food Ordering Website",
       image: foodImg,
       description: "Allows customers to explore food items and contact the shop to place food orders.",
       useCase: "Customers can browse food items and send a message to the shop requesting specific food orders.",
@@ -62,7 +62,8 @@ const Projects = () => {
         "Menu: Shows multiple food images representing available food products.",
         "Contact: Displays shop location and area details. Users can enter Name, Message, and Product they want to order."
       ],
-      githubLink: "#",
+      githubFrontendLink: "https://github.com/Sangeetha1106/foodies-frontend",
+      githubBackendLink: "https://github.com/Sangeetha1106/foodies-backend",
       liveDemoLink: "#"
     },
     {
@@ -157,7 +158,7 @@ const Projects = () => {
         "Created responsive UI using React.js",
         "Integrated complete finance workflows"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/Sangeetha1106/SDRS",
       liveDemoLink: "#"
     }
   ];
@@ -237,25 +238,55 @@ const Projects = () => {
                           </>
                         )}
 
-                        <div className="mt-4 d-flex justify-content-start gap-3">
-                          <Button 
-                            variant="outline-dark" 
-                            size="sm" 
-                            href={project.githubLink} 
-                            target="_blank"
-                            className="d-flex align-items-center gap-2"
-                          >
-                            <FaGithub /> GitHub
-                          </Button>
-                          <Button 
-                            variant="primary" 
-                            size="sm" 
-                            href={project.liveDemoLink} 
-                            target="_blank"
-                            className="d-flex align-items-center gap-2"
-                          >
-                            <FaExternalLinkAlt /> Live Demo
-                          </Button>
+                        <div className="mt-4 d-flex justify-content-start gap-3 flex-wrap">
+                          {project.githubLink && (
+                            <Button 
+                              variant="outline-dark" 
+                              size="sm" 
+                              href={project.githubLink} 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="d-flex align-items-center gap-2"
+                            >
+                              <FaGithub /> GitHub
+                            </Button>
+                          )}
+                          {project.githubFrontendLink && (
+                            <Button 
+                              variant="outline-dark" 
+                              size="sm" 
+                              href={project.githubFrontendLink} 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="d-flex align-items-center gap-2"
+                            >
+                              <FaGithub /> Frontend Repository
+                            </Button>
+                          )}
+                          {project.githubBackendLink && (
+                            <Button 
+                              variant="outline-dark" 
+                              size="sm" 
+                              href={project.githubBackendLink} 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="d-flex align-items-center gap-2"
+                            >
+                              <FaGithub /> Backend Repository
+                            </Button>
+                          )}
+                          {project.liveDemoLink && (
+                            <Button 
+                              variant="primary" 
+                              size="sm" 
+                              href={project.liveDemoLink} 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="d-flex align-items-center gap-2"
+                            >
+                              <FaExternalLinkAlt /> Live Demo
+                            </Button>
+                          )}
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>
